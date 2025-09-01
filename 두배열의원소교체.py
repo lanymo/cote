@@ -7,6 +7,9 @@ array_a.sort()
 array_b.sort(reverse=True)
 
 for i in range(k):
-    array_a[i], array_b[i] = array_b[i], array_a[i]
+    if (array_a[i] < array_b[i]):
+        array_a[i], array_b[i] = array_b[i], array_a[i]
+    else:
+        break
 
 print(sum(array_a))
