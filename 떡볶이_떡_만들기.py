@@ -4,9 +4,9 @@
 n, m = map(int, input().split())
 tteoks = list(map(int, input().split()))
 
-tteoks.sort()
+#tteoks.sort()
 start = 0
-end = tteoks[n-1] -1
+end = max(tteoks)
 
 while(start <= end):
     left_sum = 0
