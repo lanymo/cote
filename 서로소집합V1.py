@@ -11,10 +11,10 @@ def union(parent, a, b):
     pa = find_parent(parent, a)
     pb = find_parent(parent, b)
 
-    if(pa > pb):
-        parent[a] = pb
+    if pa < pb:  # 작은 번호를 루트로
+        parent[pb] = pa
     else:
-        parent[b] = pa
+        parent[pa] = pb
 
 
 v, e = map(int, input().split()) #v: 노드 개수, e: 간선 개수
