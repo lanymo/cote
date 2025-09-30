@@ -12,9 +12,9 @@ def union(parent, a, b):
     pb = find_parent(parent, b)
 
     if(pa > pb):
-        parent[a] = parent[b]
+        parent[a] = pb
     else:
-        parent[b] = parent[a]
+        parent[b] = pa
 
 
 v, e = map(int, input().split()) #v: 노드 개수, e: 간선 개수
